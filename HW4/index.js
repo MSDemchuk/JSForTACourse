@@ -25,7 +25,7 @@ try {
 
 //*****Task 2*****/
 
-/**function checkAge() {
+/*function checkAge() {
     try {
         let age = prompt('Enter your age:');
         
@@ -34,13 +34,13 @@ try {
         }
 
         if (isNaN(age)) {
-            throw new Error('The value entered is not a number!');
+            throw new TypeError('The value entered is not a number!');
         }
 
         age = Number(age);
 
         if (age < 14) {
-            throw new Error('Your age is less than 14.');
+            throw new RangeError('Your age is less than 14.');
         }
 
         alert('You have access to watch the movie.');
@@ -49,7 +49,7 @@ try {
     }
 }
 
-checkAge(); */
+checkAge();*/
 
 
 
