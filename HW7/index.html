@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 7</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #000;
+        }
+
+        a {
+            color: blue;
+            text-decoration: none;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="text">I learn JavaScript events!</p>
+    <div>
+        <button id="styleButton">Change style!</button>
+    </div><br>
+
+    <button id="btn1">Click to make the page blue.</button>
+    <button id="btn2">Double-click to make the page pink.</button>
+    <button id="btn3">Click and hold to make the page brown.</button>
+    <a href="#" id="link">Hover over to make page yellow.</a><br>
+
+    <label for="namesDropdown">Choose a name:</label>
+    <select id="namesDropdown">
+        <option value="Peter">Peter</option>
+        <option value="John">John</option>
+        <option value="Alise">Alise</option>
+        <option value="Alex">Alex</option>
+        <option value="Iren">Iren</option>
+    </select>
+
+    <button id="deleteBtn">Choose and Delete</button><br>
+
+
+    <button id="liveButton">Live button!</button>
+    <div id="messageArea"></div><br>
+
+    <div id="sizeDisplay">
+        Width: <span id="width"></span>px, Height: <span id="height"></span>px
+    </div><br>
+
+    <label for="country">Select Country:</label>
+    <select name="country" id="country">
+        <option value="ger">Germany</option>
+        <option value="usa">USA</option>
+        <option value="ukr">Ukraine</option>
+    </select>
+
+    <label for="cities">Select City:</label>
+    <select name="cities" id="cities"></select>
+
+    <p id="selectionResult"></p>
+    
+    <script src="index.js"></script>
+    </script>
+</body>
+
+</html>
