@@ -24,21 +24,25 @@ paragraphs.forEach((paragraph, index) => {
 
 
 //*****Task 4*****/
+let listItems = document.getElementById("list").children;
 
-/* let listItems = document.querySelectorAll("#list li");
-let order = [0, 4, 1, 3, 2];
+/*const first = listItems.firstElementChild;
+const second = listItems.lastElementChild;  
+const third = first.nextElementSibling;
+const fourth = second.previousElementSibling;
+const last = third.nextElementSibling;*/
 
-order.forEach(index => {
-    alert(listItems[index].textContent);
-});
+const first = listItems[0];
+const second = listItems[4];  
+const third = listItems[1];
+const fourth = listItems[3];
+const last = listItems[2];
 
-let [first, second, third, fourth, fifth] = listItems;
-alert(first.textContent);
-alert(fifth.textContent);
-alert(second.textContent);
-alert(fourth.textContent);
-alert(third.textContent);  */
+let order = [first, second, third, fourth, last];
 
+for (let index = 0; index < order.length; index++) {
+    alert(order[index].textContent);   
+}
 
 
 //*****Task 5*****/
@@ -79,7 +83,7 @@ document.getElementById("input2").value = temp;
 
 //*****Task 7*****/
 
-    let main = document.createElement("main");
+   /* let main = document.createElement("main");
     main.className = "mainClass check item";
 
     let div = document.createElement("div");
@@ -90,4 +94,4 @@ document.getElementById("input2").value = temp;
 
     div.appendChild(paragraph);
     main.appendChild(div);
-    document.body.appendChild(main);
+    document.body.appendChild(main);*/
