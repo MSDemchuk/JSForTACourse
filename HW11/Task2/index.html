@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Books</title>
+    <style>
+        #bookList {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="downloadButton">Download books</button>
+    <ul id="bookList"></ul>
+
+    <script>
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "/getAuthors", true);
+
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    const authors = JSON.parse(xhr.responseText);
+                    const bookList = document.getElementById("bookList");
+                    bookList.innerHTML = ""; // Clear any previous content
+
+                    authors.forEach(author => {
+                        const listItem = document.createElement("li");
+                        listItem.textContent = author;
+                        bookList.appendChild(listItem);
+                    });
+                } else {
+                    console.error("Error: ", xhr.status, xhr.statusText);
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>
